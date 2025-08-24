@@ -1,10 +1,10 @@
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 import binascii, os
 
-key_hex = "133a985d25765d4af3c84fcb1f8296f888d5d8fa028697e186939dbaf283108e" #Write your key here
+key_hex = "" #Write your key here
 key = binascii.unhexlify(key_hex)
 
-encoded_file_path = "FLAG.txt.ryk" #Write your encrypted file's path here
+encoded_file_path = "" #Write your encrypted file's path here
 with open(encoded_file_path, "rb") as f:
     data = f.read()
 
