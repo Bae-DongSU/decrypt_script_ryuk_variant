@@ -20,3 +20,15 @@
 # 2025.08.24 13:39 변경점
 ## 주요 변경점
 - Decrypt 된 파일이 Path에 생성됩니다.
+
+
+# 2025.08.24 15:33 변경점
+## 주요 변경점
+- Batch File을 추가하였습니다. 해당 공격에 필요한 공격자의 C2 서버 접속을 방지합니다.
+- 레퍼런스를 추가하였습니다.
+
+</br></br>
+
+#### 레퍼런스
+- Cryptography : https://cryptography.io/en/latest/hazmat/primitives/aead/
+- Microsoft Learn(Firewall) : https://learn.microsoft.com/ko-kr/windows/security/operating-system-security/network-security/windows-firewall/configure-with-command-line?tabs=cmd
