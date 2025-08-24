@@ -1,10 +1,10 @@
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
-import binascii
+import binascii, os
 
-key_hex = "" #Write your key here
+key_hex = "133a985d25765d4af3c84fcb1f8296f888d5d8fa028697e186939dbaf283108e" #Write your key here
 key = binascii.unhexlify(key_hex)
 
-encoded_file_path = "" #Write your encrypted file's path here
+encoded_file_path = "FLAG.txt.ryk" #Write your encrypted file's path here
 with open(encoded_file_path, "rb") as f:
     data = f.read()
 
@@ -20,3 +20,8 @@ except Exception as e:
     plaintext = str(e) #Plaintext. (Decrypted Ciphertext)
 
 plaintext[:200] if isinstance(plaintext, bytes) else plaintext #You can check 200 bytes from start of File when you successfully decrypted
+
+#Add Decrypted File to Path
+out_file_name = encoded_file_path[:-4] if encoded_file_path.endswith(".ryk") else encoded_file_path + ".decrypt"
+with open(out_file_name, "wb") as f:
+    f.write(plaintext)
