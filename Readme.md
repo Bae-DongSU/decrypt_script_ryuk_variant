@@ -9,6 +9,7 @@
 #### 필요 라이브러리
  - Cryptography (AESGCM) 사용
  - binascii (Key 값인 16진수 문자열을 실제 바이트 시퀀스로 변환하기 위함)
+ - os
 
 #### 사용 방법
   1. 공격자의 C2 서버에서 찾아낸 AES 복호화 키를 key_hex 에 입력합니다.
